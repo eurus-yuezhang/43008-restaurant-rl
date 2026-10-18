@@ -1,0 +1,735 @@
+{
+  "schema_version": 1,
+  "timestamp_finalized": "2026-10-05T16:39:00+11:00",
+  "evaluation_started": "2026-10-05T16:27:52+11:00",
+  "evaluation_completed": "2026-10-05T16:37:12+11:00",
+  "repository_path": "C:\\Projects\\43008_Restaurant_RL",
+  "frozen_seed_range": {
+    "start_seed": 12000,
+    "end_seed": 12199,
+    "count": 200
+  },
+  "scenarios": [
+    "off_peak",
+    "normal",
+    "peak",
+    "super_peak"
+  ],
+  "policy_model_roster": [
+    {
+      "policy_group": "baseline",
+      "algorithm": "Baseline",
+      "architecture_code": "",
+      "architecture_name": "Random-valid",
+      "research_role": "weak valid-action reference",
+      "training_seed": "",
+      "selected_checkpoint": "",
+      "model_path": "",
+      "exists": "True",
+      "load_verified": "not applicable",
+      "model_class": "",
+      "extractor_class": "",
+      "parameter_count": "",
+      "gamma": "",
+      "action_masking_verified": "valid-action policy by construction",
+      "dqn_target_hook_present": "",
+      "model_bytes": "",
+      "model_sha256": "",
+      "notes": "Fixed baseline; 800 episodes."
+    },
+    {
+      "policy_group": "baseline",
+      "algorithm": "Baseline",
+      "architecture_code": "",
+      "architecture_name": "Compatible FIFO",
+      "research_role": "traditional queue-order reference",
+      "training_seed": "",
+      "selected_checkpoint": "",
+      "model_path": "",
+      "exists": "True",
+      "load_verified": "not applicable",
+      "model_class": "",
+      "extractor_class": "",
+      "parameter_count": "",
+      "gamma": "",
+      "action_masking_verified": "valid-action policy by construction",
+      "dqn_target_hook_present": "",
+      "model_bytes": "",
+      "model_sha256": "",
+      "notes": "Fixed baseline; 800 episodes."
+    },
+    {
+      "policy_group": "baseline",
+      "algorithm": "Baseline",
+      "architecture_code": "",
+      "architecture_name": "Best-fit Greedy",
+      "research_role": "strong heuristic reference",
+      "training_seed": "",
+      "selected_checkpoint": "",
+      "model_path": "",
+      "exists": "True",
+      "load_verified": "not applicable",
+      "model_class": "",
+      "extractor_class": "",
+      "parameter_count": "",
+      "gamma": "",
+      "action_masking_verified": "valid-action policy by construction",
+      "dqn_target_hook_present": "",
+      "model_bytes": "",
+      "model_sha256": "",
+      "notes": "Fixed baseline and paired learned-agent comparator; 800 episodes."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "DQN",
+      "architecture_code": "A",
+      "architecture_name": "A Default",
+      "research_role": "default DQN reference",
+      "training_seed": "31000",
+      "selected_checkpoint": "51200",
+      "model_path": "models/dqn_default_seed31000_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskedDQN",
+      "extractor_class": "FlattenExtractor",
+      "parameter_count": "8268",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "True",
+      "model_bytes": "160011",
+      "model_sha256": "abb3312fc04d73c83e910b2a8e5f2dd511a83239afbaeaac3486843526cefd0b",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "DQN",
+      "architecture_code": "A",
+      "architecture_name": "A Default",
+      "research_role": "default DQN reference",
+      "training_seed": "31001",
+      "selected_checkpoint": "102400",
+      "model_path": "models/dqn_default_seed31001_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskedDQN",
+      "extractor_class": "FlattenExtractor",
+      "parameter_count": "8268",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "True",
+      "model_bytes": "160018",
+      "model_sha256": "84cf1a5de4b8c962897c2cbc09af26413aa397c5b05bd18268fc593d68ea8ebd",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "DQN",
+      "architecture_code": "A",
+      "architecture_name": "A Default",
+      "research_role": "default DQN reference",
+      "training_seed": "31002",
+      "selected_checkpoint": "71680",
+      "model_path": "models/dqn_default_seed31002_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskedDQN",
+      "extractor_class": "FlattenExtractor",
+      "parameter_count": "8268",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "True",
+      "model_bytes": "160027",
+      "model_sha256": "ad622438f4b11fb5301568da2677de18384f09346ee8f441056d3e10b5dc814e",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "DQN",
+      "architecture_code": "C",
+      "architecture_name": "C Shallow-64",
+      "research_role": "smaller plain DQN selected from validation",
+      "training_seed": "31000",
+      "selected_checkpoint": "81920",
+      "model_path": "models/dqn_mlp_64_seed31000_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskedDQN",
+      "extractor_class": "SimpleRestaurantExtractor",
+      "parameter_count": "4108",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "True",
+      "model_bytes": "91608",
+      "model_sha256": "c1b6f7c705e2b7e69a9f660f7ff31114cd0e0fdca7d78f3c16467bc0975ca5d7",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "DQN",
+      "architecture_code": "C",
+      "architecture_name": "C Shallow-64",
+      "research_role": "smaller plain DQN selected from validation",
+      "training_seed": "31001",
+      "selected_checkpoint": "92160",
+      "model_path": "models/dqn_mlp_64_seed31001_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskedDQN",
+      "extractor_class": "SimpleRestaurantExtractor",
+      "parameter_count": "4108",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "True",
+      "model_bytes": "91612",
+      "model_sha256": "f9f52149a15b2c709da9b15e743e04aab57cb7438929641161a834ac1e80ff9f",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "DQN",
+      "architecture_code": "C",
+      "architecture_name": "C Shallow-64",
+      "research_role": "smaller plain DQN selected from validation",
+      "training_seed": "31002",
+      "selected_checkpoint": "102400",
+      "model_path": "models/dqn_mlp_64_seed31002_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskedDQN",
+      "extractor_class": "SimpleRestaurantExtractor",
+      "parameter_count": "4108",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "True",
+      "model_bytes": "91595",
+      "model_sha256": "9a10adc6c8a8cdacf2ec53699dff337222d4edc42aa4768fc1236f1e1af356c9",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "PPO",
+      "architecture_code": "A",
+      "architecture_name": "A Default",
+      "research_role": "default PPO reference",
+      "training_seed": "31000",
+      "selected_checkpoint": "40960",
+      "model_path": "models/ppo_default_seed31000_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskablePPO",
+      "extractor_class": "FlattenExtractor",
+      "parameter_count": "15821",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "not applicable",
+      "model_bytes": "221225",
+      "model_sha256": "66a782f50654909849e72a48face7064a8f9acabf58f555a55431d1aa9680ea2",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "PPO",
+      "architecture_code": "A",
+      "architecture_name": "A Default",
+      "research_role": "default PPO reference",
+      "training_seed": "31001",
+      "selected_checkpoint": "92160",
+      "model_path": "models/ppo_default_seed31001_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskablePPO",
+      "extractor_class": "FlattenExtractor",
+      "parameter_count": "15821",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "not applicable",
+      "model_bytes": "221245",
+      "model_sha256": "e307376fdb4348ac2316763bf1b305e41c63c4b78e79529867b3a77447aafb54",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "PPO",
+      "architecture_code": "A",
+      "architecture_name": "A Default",
+      "research_role": "default PPO reference",
+      "training_seed": "31002",
+      "selected_checkpoint": "61440",
+      "model_path": "models/ppo_default_seed31002_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskablePPO",
+      "extractor_class": "FlattenExtractor",
+      "parameter_count": "15821",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "not applicable",
+      "model_bytes": "221225",
+      "model_sha256": "1d2b50d1cda12831046a9c34872549c590f570e5ee3dba226a64c0d9ce4bc90e",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "PPO",
+      "architecture_code": "C",
+      "architecture_name": "C Shallow-64",
+      "research_role": "similarly sized plain PPO comparator for G",
+      "training_seed": "31000",
+      "selected_checkpoint": "81920",
+      "model_path": "models/ppo_mlp_64_seed31000_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskablePPO",
+      "extractor_class": "SimpleRestaurantExtractor",
+      "parameter_count": "4173",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "not applicable",
+      "model_bytes": "76578",
+      "model_sha256": "9f6f856f648926a3905547b3e03b485ff2e8f30edfc8071d476545c14367cd1e",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "PPO",
+      "architecture_code": "C",
+      "architecture_name": "C Shallow-64",
+      "research_role": "similarly sized plain PPO comparator for G",
+      "training_seed": "31001",
+      "selected_checkpoint": "71680",
+      "model_path": "models/ppo_mlp_64_seed31001_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskablePPO",
+      "extractor_class": "SimpleRestaurantExtractor",
+      "parameter_count": "4173",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "not applicable",
+      "model_bytes": "76582",
+      "model_sha256": "e2f1e9c8f0988d22d4b917dd495f68c8f26c3b785b9238261f61b9ddf96c36be",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "PPO",
+      "architecture_code": "C",
+      "architecture_name": "C Shallow-64",
+      "research_role": "similarly sized plain PPO comparator for G",
+      "training_seed": "31002",
+      "selected_checkpoint": "92160",
+      "model_path": "models/ppo_mlp_64_seed31002_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskablePPO",
+      "extractor_class": "SimpleRestaurantExtractor",
+      "parameter_count": "4173",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "not applicable",
+      "model_bytes": "76578",
+      "model_sha256": "6893ea4bcd0a64f7aaf0c33778bdc8754a38464d73e46d9b78702596ab16f300",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "PPO",
+      "architecture_code": "G",
+      "architecture_name": "G Cross-Attention",
+      "research_role": "restaurant-specific party-to-table cross-attention design selected from validation",
+      "training_seed": "31000",
+      "selected_checkpoint": "81920",
+      "model_path": "models/ppo_cross_attention_seed31000_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskablePPO",
+      "extractor_class": "CrossAttentionRestaurantExtractor",
+      "parameter_count": "4097",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "not applicable",
+      "model_bytes": "90306",
+      "model_sha256": "ab3650519430ea98f69fd8a65a2eb8bcbffe39ea3f28ed4025e51622a88c72f3",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "PPO",
+      "architecture_code": "G",
+      "architecture_name": "G Cross-Attention",
+      "research_role": "restaurant-specific party-to-table cross-attention design selected from validation",
+      "training_seed": "31001",
+      "selected_checkpoint": "71680",
+      "model_path": "models/ppo_cross_attention_seed31001_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskablePPO",
+      "extractor_class": "CrossAttentionRestaurantExtractor",
+      "parameter_count": "4097",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "not applicable",
+      "model_bytes": "90310",
+      "model_sha256": "be72014fcbe437bbd36d1c4981b24a0fd74ca3cbbf3f6b4a771cd3907c879c57",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    },
+    {
+      "policy_group": "learned",
+      "algorithm": "PPO",
+      "architecture_code": "G",
+      "architecture_name": "G Cross-Attention",
+      "research_role": "restaurant-specific party-to-table cross-attention design selected from validation",
+      "training_seed": "31002",
+      "selected_checkpoint": "30720",
+      "model_path": "models/ppo_cross_attention_seed31002_best.zip",
+      "exists": "True",
+      "load_verified": "True",
+      "model_class": "MaskablePPO",
+      "extractor_class": "CrossAttentionRestaurantExtractor",
+      "parameter_count": "4097",
+      "gamma": "1.0",
+      "action_masking_verified": "True",
+      "dqn_target_hook_present": "not applicable",
+      "model_bytes": "90290",
+      "model_sha256": "a2b76f0be20c7ab0ff1fd74ec85b5708cdf342975037bacb433b171fdd7447cf",
+      "notes": "800 episodes for this trained seed; architecture aggregate uses all three trained seeds."
+    }
+  ],
+  "episode_counts": {
+    "grand_total": 14400,
+    "baselines_total": 2400,
+    "learned_models_total": 12000,
+    "per_baseline": 800,
+    "per_learned_model_instance": 800,
+    "per_learned_architecture": 2400,
+    "baseline_policies": 3,
+    "learned_model_instances": 15,
+    "learned_architectures": 5
+  },
+  "metric_definitions": {
+    "primary": [
+      "episode return",
+      "average person waiting time",
+      "lost rate",
+      "served rate"
+    ],
+    "secondary": [
+      "fixed-window seat utilisation",
+      "fixed-window table utilisation",
+      "drain ticks"
+    ],
+    "lost_rate": "(abandoned_persons + balked_persons) / arrival_persons",
+    "served_rate": "seated_persons / arrival_persons",
+    "learned_architecture_variability": "sample SD across the three training-seed model means",
+    "scenario_returns": [
+      "off_peak",
+      "normal",
+      "peak",
+      "super_peak"
+    ]
+  },
+  "correctness": {
+    "pre_evaluation_tests": [
+      {
+        "command": "python -m pytest tests -q",
+        "result": "248 passed in 5.69s"
+      },
+      {
+        "command": "python -m pytest -q",
+        "result": "248 passed in 4.70s"
+      }
+    ],
+    "post_evaluation_tests": [
+      {
+        "command": "python -m pytest tests -q",
+        "result": "248 passed in 4.39s"
+      },
+      {
+        "command": "python -m pytest -q",
+        "result": "248 passed in 4.50s"
+      }
+    ],
+    "all_expected_episodes_completed": true,
+    "illegal_actions": 0,
+    "truncation_anomalies": 0,
+    "nonfinite_metric_values": 0,
+    "arrival_person_conservation_passed": true,
+    "paired_exogenous_arrival_counts_passed": true,
+    "model_architecture_gamma_masking_gate_passed": true
+  },
+  "integrity": {
+    "training_calls": 0,
+    "model_files_modified": false,
+    "source_files_modified": false,
+    "freeze_files_modified": false,
+    "checkpoint_changes": false,
+    "architecture_or_hyperparameter_changes": false,
+    "final_model_selection_after_results": false,
+    "second_final_evaluation_run": false
+  },
+  "analysis_freeze": {
+    "comparisons": [
+      "Random-valid vs Compatible FIFO vs Best-fit Greedy",
+      "learned agents vs Best-fit",
+      "DQN C vs DQN A",
+      "PPO G vs PPO A",
+      "PPO G vs PPO C"
+    ],
+    "party_size_metrics_added": false,
+    "decision_level_agreement_added": false
+  },
+  "plots": {
+    "created": [],
+    "note": "Optional plots were not created because Matplotlib is not installed in the validated project virtual environment; no dependency or runtime setting was changed after the final run."
+  },
+  "historical_provenance": {
+    "source_and_artifact_hashes": [
+      {
+        "path": "models/architecture_study/dqn/shallow_64/seed_31000/best.zip",
+        "sha256_before": "c1b6f7c705e2b7e69a9f660f7ff31114cd0e0fdca7d78f3c16467bc0975ca5d7",
+        "sha256_after": "c1b6f7c705e2b7e69a9f660f7ff31114cd0e0fdca7d78f3c16467bc0975ca5d7",
+        "unchanged": true
+      },
+      {
+        "path": "models/architecture_study/dqn/shallow_64/seed_31001/best.zip",
+        "sha256_before": "f9f52149a15b2c709da9b15e743e04aab57cb7438929641161a834ac1e80ff9f",
+        "sha256_after": "f9f52149a15b2c709da9b15e743e04aab57cb7438929641161a834ac1e80ff9f",
+        "unchanged": true
+      },
+      {
+        "path": "models/architecture_study/dqn/shallow_64/seed_31002/best.zip",
+        "sha256_before": "9a10adc6c8a8cdacf2ec53699dff337222d4edc42aa4768fc1236f1e1af356c9",
+        "sha256_after": "9a10adc6c8a8cdacf2ec53699dff337222d4edc42aa4768fc1236f1e1af356c9",
+        "unchanged": true
+      },
+      {
+        "path": "models/architecture_study/ppo/shallow_64/seed_31000/best.zip",
+        "sha256_before": "9f6f856f648926a3905547b3e03b485ff2e8f30edfc8071d476545c14367cd1e",
+        "sha256_after": "9f6f856f648926a3905547b3e03b485ff2e8f30edfc8071d476545c14367cd1e",
+        "unchanged": true
+      },
+      {
+        "path": "models/architecture_study/ppo/shallow_64/seed_31001/best.zip",
+        "sha256_before": "e2f1e9c8f0988d22d4b917dd495f68c8f26c3b785b9238261f61b9ddf96c36be",
+        "sha256_after": "e2f1e9c8f0988d22d4b917dd495f68c8f26c3b785b9238261f61b9ddf96c36be",
+        "unchanged": true
+      },
+      {
+        "path": "models/architecture_study/ppo/shallow_64/seed_31002/best.zip",
+        "sha256_before": "6893ea4bcd0a64f7aaf0c33778bdc8754a38464d73e46d9b78702596ab16f300",
+        "sha256_after": "6893ea4bcd0a64f7aaf0c33778bdc8754a38464d73e46d9b78702596ab16f300",
+        "unchanged": true
+      },
+      {
+        "path": "models/g_cross_attention_study/ppo/cross_attention_q4_t4/seed_31000/best.zip",
+        "sha256_before": "ab3650519430ea98f69fd8a65a2eb8bcbffe39ea3f28ed4025e51622a88c72f3",
+        "sha256_after": "ab3650519430ea98f69fd8a65a2eb8bcbffe39ea3f28ed4025e51622a88c72f3",
+        "unchanged": true
+      },
+      {
+        "path": "models/g_cross_attention_study/ppo/cross_attention_q4_t4/seed_31001/best.zip",
+        "sha256_before": "be72014fcbe437bbd36d1c4981b24a0fd74ca3cbbf3f6b4a771cd3907c879c57",
+        "sha256_after": "be72014fcbe437bbd36d1c4981b24a0fd74ca3cbbf3f6b4a771cd3907c879c57",
+        "unchanged": true
+      },
+      {
+        "path": "models/g_cross_attention_study/ppo/cross_attention_q4_t4/seed_31002/best.zip",
+        "sha256_before": "a2b76f0be20c7ab0ff1fd74ec85b5708cdf342975037bacb433b171fdd7447cf",
+        "sha256_after": "a2b76f0be20c7ab0ff1fd74ec85b5708cdf342975037bacb433b171fdd7447cf",
+        "unchanged": true
+      },
+      {
+        "path": "models/phase7b_dqn_seed31000_best.zip",
+        "sha256_before": "abb3312fc04d73c83e910b2a8e5f2dd511a83239afbaeaac3486843526cefd0b",
+        "sha256_after": "abb3312fc04d73c83e910b2a8e5f2dd511a83239afbaeaac3486843526cefd0b",
+        "unchanged": true
+      },
+      {
+        "path": "models/phase7b_dqn_seed31001_best.zip",
+        "sha256_before": "84cf1a5de4b8c962897c2cbc09af26413aa397c5b05bd18268fc593d68ea8ebd",
+        "sha256_after": "84cf1a5de4b8c962897c2cbc09af26413aa397c5b05bd18268fc593d68ea8ebd",
+        "unchanged": true
+      },
+      {
+        "path": "models/phase7b_dqn_seed31002_best.zip",
+        "sha256_before": "ad622438f4b11fb5301568da2677de18384f09346ee8f441056d3e10b5dc814e",
+        "sha256_after": "ad622438f4b11fb5301568da2677de18384f09346ee8f441056d3e10b5dc814e",
+        "unchanged": true
+      },
+      {
+        "path": "models/phase7b_ppo_seed31000_best.zip",
+        "sha256_before": "66a782f50654909849e72a48face7064a8f9acabf58f555a55431d1aa9680ea2",
+        "sha256_after": "66a782f50654909849e72a48face7064a8f9acabf58f555a55431d1aa9680ea2",
+        "unchanged": true
+      },
+      {
+        "path": "models/phase7b_ppo_seed31001_best.zip",
+        "sha256_before": "e307376fdb4348ac2316763bf1b305e41c63c4b78e79529867b3a77447aafb54",
+        "sha256_after": "e307376fdb4348ac2316763bf1b305e41c63c4b78e79529867b3a77447aafb54",
+        "unchanged": true
+      },
+      {
+        "path": "models/phase7b_ppo_seed31002_best.zip",
+        "sha256_before": "1d2b50d1cda12831046a9c34872549c590f570e5ee3dba226a64c0d9ce4bc90e",
+        "sha256_after": "1d2b50d1cda12831046a9c34872549c590f570e5ee3dba226a64c0d9ce4bc90e",
+        "unchanged": true
+      },
+      {
+        "path": "restaurant_rl/action_masking.py",
+        "sha256_before": "a808b75d0fbb127943e6091663102be07dbbabd3024f4bc3b6ea93352c070d54",
+        "sha256_after": "a808b75d0fbb127943e6091663102be07dbbabd3024f4bc3b6ea93352c070d54",
+        "unchanged": true
+      },
+      {
+        "path": "restaurant_rl/architectures.py",
+        "sha256_before": "5ceb29184c4d872a7e955a67e0dc0aacd98a7dbcec06a0353521243eca56cf0c",
+        "sha256_after": "5ceb29184c4d872a7e955a67e0dc0aacd98a7dbcec06a0353521243eca56cf0c",
+        "unchanged": true
+      },
+      {
+        "path": "restaurant_rl/baselines.py",
+        "sha256_before": "09c0278e910a97ed8f12dbfb5eb85fd82c1e231052e216a2720c31f5365047ae",
+        "sha256_after": "09c0278e910a97ed8f12dbfb5eb85fd82c1e231052e216a2720c31f5365047ae",
+        "unchanged": true
+      },
+      {
+        "path": "restaurant_rl/config.py",
+        "sha256_before": "c1a5f4dc20f26e9c5d9ea1e3bd353925790a9cc8a4345f8d3313777bd228d1b0",
+        "sha256_after": "c1a5f4dc20f26e9c5d9ea1e3bd353925790a9cc8a4345f8d3313777bd228d1b0",
+        "unchanged": true
+      },
+      {
+        "path": "restaurant_rl/environment.py",
+        "sha256_before": "2fc98aa57bbfc08ebfe7983409ac11b1e2fbf21802b465f7a5a5d820017b8706",
+        "sha256_after": "2fc98aa57bbfc08ebfe7983409ac11b1e2fbf21802b465f7a5a5d820017b8706",
+        "unchanged": true
+      },
+      {
+        "path": "restaurant_rl/feature_extractors.py",
+        "sha256_before": "9c993bc5d3855c5893eb19490af924c94c9d8440e351d262cfd6843da710f677",
+        "sha256_after": "9c993bc5d3855c5893eb19490af924c94c9d8440e351d262cfd6843da710f677",
+        "unchanged": true
+      },
+      {
+        "path": "restaurant_rl/masked_dqn.py",
+        "sha256_before": "c52f66a97287068f55054ec0030a4058d822d9418689185599785973e24db46f",
+        "sha256_after": "c52f66a97287068f55054ec0030a4058d822d9418689185599785973e24db46f",
+        "unchanged": true
+      },
+      {
+        "path": "restaurant_rl/mixed_training.py",
+        "sha256_before": "68fde018c20993a411f4aed34e691bc7ebf9091df445ae833b84ac359f584bdc",
+        "sha256_after": "68fde018c20993a411f4aed34e691bc7ebf9091df445ae833b84ac359f584bdc",
+        "unchanged": true
+      },
+      {
+        "path": "results/final_evaluation_freeze/candidate_unused_seed_ranges.csv",
+        "sha256_before": "bd269073130be0d9308290f250277f7df0b5f79e60b75d3ea36ee8f7038e6e6d",
+        "sha256_after": "bd269073130be0d9308290f250277f7df0b5f79e60b75d3ea36ee8f7038e6e6d",
+        "unchanged": true
+      },
+      {
+        "path": "results/final_evaluation_freeze/final_comparison_plan.md",
+        "sha256_before": "54dfea056748a84df988a417a8ab8dcce17fd109d56bbac0e8922fc06b5e738f",
+        "sha256_after": "54dfea056748a84df988a417a8ab8dcce17fd109d56bbac0e8922fc06b5e738f",
+        "unchanged": true
+      },
+      {
+        "path": "results/final_evaluation_freeze/final_metric_spec.md",
+        "sha256_before": "31367f66b9a0bece46d57a5bd4d656a72eee1a5d46ac2a3f7e59b4edc54ae2be",
+        "sha256_after": "31367f66b9a0bece46d57a5bd4d656a72eee1a5d46ac2a3f7e59b4edc54ae2be",
+        "unchanged": true
+      },
+      {
+        "path": "results/final_evaluation_freeze/final_model_roster.csv",
+        "sha256_before": "471589a6ebdf41978ef1e3568efaf585480a41250e6ad62bbf972e4762a10018",
+        "sha256_after": "471589a6ebdf41978ef1e3568efaf585480a41250e6ad62bbf972e4762a10018",
+        "unchanged": true
+      },
+      {
+        "path": "results/final_evaluation_freeze/final_seed_freeze.json",
+        "sha256_before": "8f5cce51557c18fda4fbc96bd29ba4f27b973794a351ff2e6aab69cca8ec4c1a",
+        "sha256_after": "8f5cce51557c18fda4fbc96bd29ba4f27b973794a351ff2e6aab69cca8ec4c1a",
+        "unchanged": true
+      },
+      {
+        "path": "results/final_evaluation_freeze/freeze_manifest.json",
+        "sha256_before": "d0e5e505e849348f6bb1989dd963220761f6f7076a15e29cda0fe471bb3b88f0",
+        "sha256_after": "d0e5e505e849348f6bb1989dd963220761f6f7076a15e29cda0fe471bb3b88f0",
+        "unchanged": true
+      },
+      {
+        "path": "results/final_evaluation_freeze/seed_ledger.csv",
+        "sha256_before": "4f88184afd88e5aee1ca006dc42ad02ae5a5cfa24f84e06f0654640dda825c67",
+        "sha256_after": "4f88184afd88e5aee1ca006dc42ad02ae5a5cfa24f84e06f0654640dda825c67",
+        "unchanged": true
+      },
+      {
+        "path": "tools/run_phase8_final_evaluation.py",
+        "sha256_before": "ffb6355d6f994f5601a95deaee1d5b5972c1fe320dc609d07d3df7304382a4fc",
+        "sha256_after": "ffb6355d6f994f5601a95deaee1d5b5972c1fe320dc609d07d3df7304382a4fc",
+        "unchanged": true
+      },
+      {
+        "path": "tools/run_phase9_behaviour_analysis.py",
+        "sha256_before": "2bb8705555378c14ba425e6c7994fc2efdc23fe124277fcfe563280a11c8c4ce",
+        "sha256_after": "2bb8705555378c14ba425e6c7994fc2efdc23fe124277fcfe563280a11c8c4ce",
+        "unchanged": true
+      }
+    ],
+    "result_file_hashes": [
+      {
+        "path": "results/final_heldout_evaluation/final_architecture_summary.csv",
+        "bytes": 3242,
+        "sha256": "5b6e7d66aac96dc603dfe5d2939169d8d9a08590c049e70996238dbc8fc5b35b"
+      },
+      {
+        "path": "results/final_heldout_evaluation/final_episode_rows.csv",
+        "bytes": 3038743,
+        "sha256": "b47405081e99886ea65d331cdac42248ecf81ea3939fbf042b825004d1f9a057"
+      },
+      {
+        "path": "results/final_heldout_evaluation/final_model_seed_summary.csv",
+        "bytes": 6385,
+        "sha256": "62f9f2f5a866e51ddae27e0b828aa6062c48f8d5e7bbaba59edb980a6080f3a5"
+      },
+      {
+        "path": "results/final_heldout_evaluation/final_paired_vs_bestfit_architecture.csv",
+        "bytes": 849,
+        "sha256": "9f346ef4c0114a7d8a9f2c5f7dc24de7a2bde9c5ddeadd88bbf791df3b79dedc"
+      },
+      {
+        "path": "results/final_heldout_evaluation/final_paired_vs_bestfit_per_model.csv",
+        "bytes": 1479,
+        "sha256": "e6eb6a074bc8415afb7d3b433f4813177a3afa3da0ebdcd0953df0dc9e63a051"
+      },
+      {
+        "path": "results/final_heldout_evaluation/final_preregistered_comparisons.csv",
+        "bytes": 7583,
+        "sha256": "347d3ff679c3d1ecf94f5f28d514fbf312609a3326fd82baf2b3701acbbda038"
+      },
+      {
+        "path": "results/final_heldout_evaluation/final_results_report.md",
+        "bytes": 5398,
+        "sha256": "08d5f898a661a462dc9e58a022a0dd79c96b35f7920fa2669af04922ea5585e6"
+      },
+      {
+        "path": "results/final_heldout_evaluation/final_scenario_summary.csv",
+        "bytes": 10761,
+        "sha256": "194920522c940964ecc2cf4742abdc2d54d1ff4096c23cf4ca2df7fec138744b"
+      },
+      {
+        "path": "results/final_heldout_evaluation/final_evaluation_manifest.json",
+        "bytes": null,
+        "sha256": null,
+        "note": "Self-reference intentionally omitted."
+      }
+    ]
+  },
+  "delivery_update": {
+    "date": "2026-10-18",
+    "note": "Current roster paths use delivery names. Experiment dates, numbers and selection are unchanged. Historical provenance retains original names and hashes; those entries are not current runtime paths.",
+    "original_record": "C:/Projects/43008_Restaurant_RL_Archive/2026-10-18_before_web_only/submission/results/final_heldout_evaluation/final_evaluation_manifest.json",
+    "current_inventory": "SUBMISSION_MANIFEST.md"
+  }
+}

@@ -1,0 +1,22 @@
+# Local Python environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Notebook and editor working files
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.tmp
+*.bak
+
+# Local packaging and historical backups
+backups/
+*_Submission.zip
+43008_Restaurant_RL_Submission.zip
+
+# Model checkpoint ZIP files under models/ are intentionally tracked.

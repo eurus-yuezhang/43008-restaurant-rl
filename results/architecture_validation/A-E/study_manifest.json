@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "architectures": {
+    "shallow_wide_128": {
+      "code": "B",
+      "display_name": "Shallow-Wide-128",
+      "hidden_sizes": [
+        128
+      ]
+    },
+    "shallow_64": {
+      "code": "C",
+      "display_name": "Shallow-64",
+      "hidden_sizes": [
+        64
+      ]
+    },
+    "compact_32": {
+      "code": "D",
+      "display_name": "Compact-32",
+      "hidden_sizes": [
+        32
+      ]
+    },
+    "tapered_64x32": {
+      "code": "E",
+      "display_name": "Tapered-64x32",
+      "hidden_sizes": [
+        64,
+        32
+      ]
+    }
+  },
+  "training_seeds": [
+    31000,
+    31001,
+    31002
+  ],
+  "validation_seeds": [
+    5000,
+    5009
+  ],
+  "checkpoints": [
+    10240,
+    20480,
+    30720,
+    40960,
+    51200,
+    61440,
+    71680,
+    81920,
+    92160,
+    102400
+  ],
+  "total_timesteps": 102400,
+  "gamma": 1.0,
+  "python": "3.12.10",
+  "torch": "2.14.0+cpu",
+  "stable_baselines3": "2.9.0",
+  "sb3_contrib": "2.9.0",
+  "frozen_hashes": {
+    "restaurant_rl\\environment.py": "2fc98aa57bbfc08ebfe7983409ac11b1e2fbf21802b465f7a5a5d820017b8706",
+    "restaurant_rl\\config.py": "c1a5f4dc20f26e9c5d9ea1e3bd353925790a9cc8a4345f8d3313777bd228d1b0",
+    "restaurant_rl\\baselines.py": "09c0278e910a97ed8f12dbfb5eb85fd82c1e231052e216a2720c31f5365047ae",
+    "restaurant_rl\\action_masking.py": "a808b75d0fbb127943e6091663102be07dbbabd3024f4bc3b6ea93352c070d54",
+    "restaurant_rl\\masked_dqn.py": "c52f66a97287068f55054ec0030a4058d822d9418689185599785973e24db46f",
+    "restaurant_rl\\mixed_training.py": "68fde018c20993a411f4aed34e691bc7ebf9091df445ae833b84ac359f584bdc"
+  },
+  "completed_custom_runs": 24
+}

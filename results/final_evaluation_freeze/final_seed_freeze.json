@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "timestamp": "2026-10-05T15:58:54+11:00",
+  "statement": "Selected before any final held-out evaluation was run.",
+  "selection_rule": "Inspect thousand-aligned, easy-to-document 200-seed ranges in ascending order starting at 12000; select the first range with zero overlap with any proven or conservatively reserved prior seed evidence.",
+  "selected_final_environment_seed_range": {
+    "start_seed": 12000,
+    "end_seed": 12199,
+    "count": 200
+  },
+  "candidate_ranges": [
+    {
+      "start_seed": 12000,
+      "end_seed": 12199,
+      "count": 200,
+      "confirmed_unused": true,
+      "nearest previously used ranges": "below: 10000-10199; above: 20000-20014",
+      "evidence_checked": "316 repository text evidence files (.py/.csv/.json/.md/.txt/.ipynb), structured seed columns, manifests, result/model paths, source constants and formulas, selected model archives, current temp inventory, and supplied benchmark brief"
+    },
+    {
+      "start_seed": 13000,
+      "end_seed": 13199,
+      "count": 200,
+      "confirmed_unused": true,
+      "nearest previously used ranges": "below: 10000-10199; above: 20000-20014",
+      "evidence_checked": "316 repository text evidence files (.py/.csv/.json/.md/.txt/.ipynb), structured seed columns, manifests, result/model paths, source constants and formulas, selected model archives, current temp inventory, and supplied benchmark brief"
+    },
+    {
+      "start_seed": 14000,
+      "end_seed": 14199,
+      "count": 200,
+      "confirmed_unused": true,
+      "evidence_checked": "316 repository text evidence files (.py/.csv/.json/.md/.txt/.ipynb), structured seed columns, manifests, result/model paths, source constants and formulas, selected model archives, current temp inventory, and supplied benchmark brief",
+      "nearest previously used ranges": "below: 10000-10199; above: 20000-20014"
+    }
+  ],
+  "selection_basis": "seed hygiene only; no model was evaluated on any candidate range",
+  "evaluation_status": {
+    "final_episodes_run": 0,
+    "selected_seed_resets_or_steps": 0,
+    "model_training_run": false
+  },
+  "paired_randomness": "All policies will use identical scenario + environment-seed combinations. Existing keyed exogenous randomness is preserved. If the unchanged earlier Random-valid factory is reused, its policy RNG is derived as 2,000,000 + environment_seed."
+}

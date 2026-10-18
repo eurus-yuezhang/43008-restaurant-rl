@@ -1,0 +1,4 @@
+﻿start_seed,end_seed,count,confirmed_unused,nearest previously used ranges,evidence_checked
+12000,12199,200,True,below: 10000-10199; above: 20000-20014,"316 repository text evidence files (.py/.csv/.json/.md/.txt/.ipynb), structured seed columns, manifests, result/model paths, source constants and formulas, selected model archives, current temp inventory, and supplied benchmark brief"
+13000,13199,200,True,below: 10000-10199; above: 20000-20014,"316 repository text evidence files (.py/.csv/.json/.md/.txt/.ipynb), structured seed columns, manifests, result/model paths, source constants and formulas, selected model archives, current temp inventory, and supplied benchmark brief"
+14000,14199,200,True,below: 10000-10199; above: 20000-20014,"316 repository text evidence files (.py/.csv/.json/.md/.txt/.ipynb), structured seed columns, manifests, result/model paths, source constants and formulas, selected model archives, current temp inventory, and supplied benchmark brief"

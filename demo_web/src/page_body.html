@@ -1,0 +1,70 @@
+<div class="fx" id="fx" aria-hidden="true"></div>
+<div class="wrap">
+  <header>
+    <div class="top">
+      <div class="brand">
+        <h1>Restaurant Policy Lab</h1>
+        <p id="meta">Dinner · Super Peak · replay of development seed 20000</p>
+      </div>
+      <div class="clock"><small>Simulated time</small><span id="clock">17:00</span></div>
+    </div>
+    <div class="scorebar">
+      <div class="stat"><span>Seated</span><b id="sServed">0</b></div>
+      <div class="stat lost"><span>Lost</span><b id="sLost">0</b></div>
+      <div class="formula" aria-label="Reward for the last five minutes">
+        <span class="flab">Reward, last 5 min</span>
+        <span class="fterms"><span>−0.1 × <b id="fW">0</b> waiting</span><span class="fl">− 1.2 × <b id="fL">0</b> lost</span><span>= <b id="fR" class="res">0.00</b></span></span>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="stat ret"><span>Return</span><b id="sRet">0.0</b></div>
+    </div>
+  </header>
+
+  <div class="narrow">
+    <div class="narr" aria-live="polite">
+      <div class="main" id="nMain">The restaurant opens at 17:00.</div>
+      <div class="sub" id="nSub">Guests arrive at the door, wait in the queue, and the host decides who sits where.</div>
+    </div>
+    <button class="cmp" id="bCompare" title="Compare all seven hosts on this evening (C)">Compare hosts</button>
+  </div>
+
+  <div class="stage">
+    <div class="summary" id="summary" hidden>
+      <div class="scard" role="dialog" aria-labelledby="sumTitle">
+        <p class="cap">Same evening, seven hosts · development seed 20000</p>
+        <h2 id="sumTitle">Closing time</h2>
+        <div class="shead"><span>Host</span><span class="n">Seated</span><span class="n">Lost</span><span class="n">Return tonight</span><span class="n">vs best</span><span class="n" id="sumAvgHead">Final test avg</span></div>
+        <div id="sumRows"></div>
+        <p class="snote">Return is the total reward for the evening; higher (closer to 0) is better. Best values are highlighted. Final test avg is the mean over 200 evenings per baseline and 600 per learned group (3 trained models × 200) at this demand level, from the frozen held-out evaluation.</p>
+        <div class="sbtns"><button id="sumReplay">Replay evening</button><button class="primary" id="sumClose">Close</button></div>
+      </div>
+    </div>
+    <svg id="scene" viewBox="0 0 1200 740" role="img" aria-label="Animated floor plan: waiting parties on the left, twelve tables on the right"></svg>
+  </div>
+
+  <div class="console">
+    <div class="cblock transport">
+      <span class="cap">Playback</span>
+      <div class="row">
+        <button class="icon play" id="bPlay" aria-label="Pause" title="Play / pause (Space)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path id="playIcon" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+        </button>
+        <button class="icon" id="bStep" aria-label="Next decision" title="Next decision, then pause (→)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5l9 7-9 7zM16.5 5H19v14h-2.5z"/></svg>
+        </button>
+        <button class="icon" id="bReset" aria-label="Restart evening" title="Restart evening (R)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a7 7 0 1 1-6.6 4.7l2.1.7A4.8 4.8 0 1 0 12 7.2V10L7.5 6.1 12 2.2z"/></svg>
+        </button>
+        <div class="seg" id="gSpeed" role="group" aria-label="Speed"></div>
+      </div>
+    </div>
+    <div class="cblock">
+      <span class="cap">Host <em>rules · DQN · PPO</em></span>
+      <div class="seg" id="gPolicy" role="group" aria-label="Host"></div>
+    </div>
+    <div class="cblock">
+      <span class="cap">Demand</span>
+      <div class="seg" id="gScen" role="group" aria-label="Demand"></div>
+    </div>
+  </div>
+</div>
